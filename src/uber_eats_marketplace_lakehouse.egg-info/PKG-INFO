@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: uber-eats-marketplace-lakehouse
+Version: 0.1.0
+Summary: Production-minded Uber Eats marketplace lakehouse reference implementation for Databricks Free Edition.
+Requires-Python: >=3.10
+Requires-Dist: pyyaml>=6.0.1
+Provides-Extra: dev
+Requires-Dist: pyspark<3.6.0,>=3.5.0; extra == "dev"
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: ruff>=0.5.0; extra == "dev"

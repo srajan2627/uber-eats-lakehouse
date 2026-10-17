@@ -1,0 +1,6 @@
+pyyaml>=6.0.1
+
+[dev]
+pyspark<3.6.0,>=3.5.0
+pytest>=8.0.0
+ruff>=0.5.0
