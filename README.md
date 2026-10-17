@@ -8,6 +8,22 @@ The solution includes Unity Catalog setup, Auto Loader ingestion, a medallion ar
 
 ![Uber Eats Marketplace Lakehouse Data Model](docs/images/uber-eats-marketplace-lakehouse-data-model.png)
 
+## Genie Agent
+
+The **Marketplace Performance & Delivery Analytics** Genie agent lets users explore the lakehouse through plain-language questions. It uses curated Gold and data quality views to answer questions about order volume, gross booking amounts, delivery SLA performance, estimated platform commission, and quarantined records.
+
+The pipeline's final notebook, [`01_publish_genie_views.py`](notebooks/06_genie/01_publish_genie_views.py), publishes the views to add to the Genie space. The [Genie Agent Instructions](docs/03_GENIE_AGENT_INSTRUCTIONS.md) provide the source objects, business definitions, agent instructions, and example questions for configuration.
+
+**Marketplace performance:** Asking "Which city had the highest gross booking amount last week?" produces a city comparison and a written summary using the project's generated sample data.
+
+![Genie agent answering a gross booking amount question with a city comparison chart](docs/images/Gennie_Agent.png)
+
+**Merchant performance:** Asking "Show top merchants by estimated platform commission" produces a merchant ranking, chart, and supporting results. The screenshot also shows the agent instructions that guide its use of the curated views.
+
+![Genie agent ranking merchants by estimated platform commission alongside its configured instructions](docs/images/Gennie%20Agent-2.png)
+
+## Documentation
+
 Start with the overview, then use the technical guide as the execution runbook:
 
 - [Project Overview And Business Outcomes](docs/01_PROJECT_OVERVIEW_AND_BUSINESS_OUTCOMES.md)
